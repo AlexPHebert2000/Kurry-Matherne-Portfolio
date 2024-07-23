@@ -1,0 +1,36 @@
+{
+  "books" : [
+    {
+      "title": "Book A",
+      "description": "A great book",
+      "coverImage": "https://placehold.co/800x1100/burlywood/white",
+      "images": {
+        "position": 1,
+        "url": "https://placehold.co/800x1100/cornflowerblue/white"
+      }
+    },
+    {
+      "title": "Book B",
+      "description": "Another great book",
+      "coverImage": "https://placehold.co/800x1100/darkgoldenrod/white",
+      "images": {
+        "position": 1,
+        "url": "https://placehold.co/800x1100/darkorchid/white"
+      }
+    }
+  ],
+  "updates": [
+    {
+      "title": "Welcome to the portfolio",
+      "body": "Nice to see you"
+    },
+    {
+      "title": "Going to Comic Con",
+      "body": "Ill be at booth 2A"
+    }
+  ],
+  "info": {
+    "aboutMe" : "My name is Kurry Matherne. I am a comic book artist and writer",
+    "headShotUrl": "https://placehold.co/400/darkorchid/white?text=Kurry+Mathrene"
+  }
+}
