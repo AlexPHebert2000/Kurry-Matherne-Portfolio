@@ -7,6 +7,6 @@ export const load = (async () => {
       createdAt: "desc"
     }
   });
-  const info = await prisma.info.findFirst();
+  const info = await prisma.info.findFirstOrThrow();
   return { updates, info };
 }) satisfies PageServerLoad;
