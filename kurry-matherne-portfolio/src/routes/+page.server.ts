@@ -2,6 +2,11 @@ import prisma from "$lib/prisma";
 import type { PageServerLoad } from './$types';
 
 export const load = (async () => {
-  const response = await prisma.update.findMany();
-  return { feed: response };
+  const updates = await prisma.update.findMany({
+    orderBy: {
+      createdAt: "desc"
+    }
+  });
+  const info = await prisma.info.findFirst();
+  return { updates, info };
 }) satisfies PageServerLoad;
