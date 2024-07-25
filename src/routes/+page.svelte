@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import UpdateCard from '../componets/UpdateCard.svelte';
+  import UpdateCard from '../components/UpdateCard.svelte';
+  import BookCarousel from '../components/BookCarousel.svelte';
   export let data: PageData
 </script>
 
@@ -15,4 +16,5 @@
   {#each data.updates as update}
     <UpdateCard update={update}/>
   {/each}
+  <BookCarousel books={data.books}/>
 </div>

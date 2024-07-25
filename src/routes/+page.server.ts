@@ -8,5 +8,6 @@ export const load = (async () => {
     }
   });
   const info = await prisma.info.findFirstOrThrow();
-  return { updates, info };
+  const books = await prisma.book.findMany()
+  return { updates, info, books };
 }) satisfies PageServerLoad;
