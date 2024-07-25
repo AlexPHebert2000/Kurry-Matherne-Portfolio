@@ -11,5 +11,5 @@
             <p>{book.description}</p>
         </div>
     </div>
-    <button>See More</button>
+    <a href={`/book/${book.id}`}>See More</a>
 </div>
