@@ -15,7 +15,6 @@ export const load = (async () => {
     include: {
       images: true,
     },
-  })
-  console.log(books);
+  });
   return { updates, info, books };
 }) satisfies PageServerLoad;

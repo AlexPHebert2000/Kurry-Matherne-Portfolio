@@ -14,10 +14,25 @@
       "type": "BOOK",
       "title": "Book B",
       "description": "Another great book",
-      "coverImage": "https://placehold.co/800x1100/darkgoldenrod/white",
       "images": {
         "position": 1,
         "url": "https://placehold.co/800x1100/darkorchid/white"
+      }
+    },
+    {
+      "type": "ART",
+      "title": "Art 1",
+      "images": {
+        "position": 1,
+        "url": "https://placehold.co/800x600/cornflowerblue/white"
+      }
+    },
+    {
+      "type": "ART",
+      "title": "Art 2",
+      "images": {
+        "position": 1,
+        "url": "https://placehold.co/900x900/darkorchid/white"
       }
     }
   ],

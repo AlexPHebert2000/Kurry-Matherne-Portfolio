@@ -16,5 +16,16 @@
   {#each data.updates as update}
     <UpdateCard update={update}/>
   {/each}
-  <BookCarousel books={data.books}/>
+  <div class="flex flex-row justify-evenly">
+    <button class="w-36 h-12 bg-slate-400 rounded-full font-bold">
+      <a href="/gallery">
+        Art Gallery
+      </a>
+    </button>
+    <button class="w-36 bg-slate-400 rounded-full font-bold">Comics</button>
+  </div>
+  <div>
+    <h1>Latest Works!</h1>
+    <BookCarousel books={data.books}/>
+  </div>
 </div>
