@@ -5,7 +5,7 @@
   export let data: PageData
 </script>
 
-<div class="flex justify-center flex-col p-20">
+<div class="flex justify-center flex-col px-5 p-20">
   <div class="flex flex-row py-3 space-x-2">
     <img class="lg:w-60 md:w-32 w-28" src={data.info.headShotUrl} alt="Kurry Matherne"/>
     <div>
