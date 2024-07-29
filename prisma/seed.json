@@ -1,6 +1,7 @@
 {
-  "books" : [
+  "works" : [
     {
+      "type": "BOOK",
       "title": "Book A",
       "description": "A great book",
       "coverImage": "https://placehold.co/800x1100/burlywood/white",
@@ -10,6 +11,7 @@
       }
     },
     {
+      "type": "BOOK",
       "title": "Book B",
       "description": "Another great book",
       "coverImage": "https://placehold.co/800x1100/darkgoldenrod/white",

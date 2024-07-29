@@ -8,6 +8,14 @@ export const load = (async () => {
     }
   });
   const info = await prisma.info.findFirstOrThrow();
-  const books = await prisma.book.findMany()
+  const books = await prisma.work.findMany({
+    where: {
+      type: "BOOK",
+    },
+    include: {
+      images: true,
+    },
+  })
+  console.log(books);
   return { updates, info, books };
 }) satisfies PageServerLoad;

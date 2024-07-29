@@ -7,11 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Book {
+model Work {
   id          Int     @id @default(autoincrement())
-  title       String  @unique
-  description String
-  coverImage  String
+  type        String
+  title       String?  @unique
+  description String?
   images      Image[]
 }
 
@@ -19,8 +19,8 @@ model Image {
   id       Int    @id @default(autoincrement())
   position Int
   url      String
-  bookID   Int
-  book     Book   @relation(fields: [bookID], references: [id])
+  workID   Int
+  work     Work   @relation(fields: [workID], references: [id])
 }
 
 model Update {

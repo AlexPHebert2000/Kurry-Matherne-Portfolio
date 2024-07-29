@@ -4,18 +4,25 @@ import seedData from "./seed.json" assert { type: "json" };
 const prisma = new PrismaClient();
 
 async function main () {
+  console.log('Clearing database');
+
+  await prisma.image.deleteMany();
+  await prisma.update.deleteMany();
+  await prisma.work.deleteMany();
+  await prisma.info.deleteMany();
+
   console.log('Seeding database');
 
   await prisma.info.create({
     data: seedData.info,
   });
 
-  for (const book of seedData.books) {
-    await prisma.book.create({
+  for (const book of seedData.works) {
+    await prisma.work.create({
       data: {
         title: book.title,
         description: book.description,
-        coverImage: book.coverImage,
+        type: book.type,
         images: {
           create: book.images
         }

@@ -1,8 +1,8 @@
 <script lang="ts">
   import BookCarouselCard from './BookCarouselCard.svelte';
-  import type {Book} from '@prisma/client';
+  import type { WorkWithImages } from "../../types"
 
-  export let books : Book[];
+  export let books : WorkWithImages[];
 
   let currentIndex = 0;
   const scroll = (forward = true) => {
