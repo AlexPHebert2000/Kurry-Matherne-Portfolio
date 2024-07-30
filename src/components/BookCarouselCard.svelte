@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { WorkWithImages } from "../../types";
     export let book : WorkWithImages;
-    console.log(book)
 </script>
 
 <div class="bg-slate-400 rounded-md p-2 my-3">

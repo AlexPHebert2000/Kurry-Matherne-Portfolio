@@ -17,11 +17,11 @@
     <UpdateCard update={update}/>
   {/each}
   <div class="flex flex-row justify-evenly">
-    <button class="w-36 h-12 bg-slate-400 rounded-full font-bold">
-      <a href="/gallery">
+    <a href="/gallery">
+      <button class="w-36 h-12 bg-slate-400 rounded-full font-bold">
         Art Gallery
-      </a>
-    </button>
+      </button>
+    </a>
     <button class="w-36 bg-slate-400 rounded-full font-bold">Comics</button>
   </div>
   <div>
