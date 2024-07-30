@@ -1,10 +1,12 @@
 {
+  "series": {
+    "title": "Series 1"
+  },
   "works" : [
     {
       "type": "BOOK",
       "title": "Book A",
       "description": "A great book",
-      "coverImage": "https://placehold.co/800x1100/burlywood/white",
       "images": {
         "position": 1,
         "url": "https://placehold.co/800x1100/cornflowerblue/white"

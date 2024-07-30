@@ -13,6 +13,14 @@ model Work {
   title       String?  @unique
   description String?
   images      Image[]
+  seriesID    Int?
+  series      Series? @relation(fields: [seriesID], references: [id])
+}
+
+model Series {
+  id Int @id @default(autoincrement())
+  title String
+  works Work[]
 }
 
 model Image {

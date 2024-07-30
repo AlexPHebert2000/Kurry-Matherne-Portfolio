@@ -6,10 +6,11 @@ const prisma = new PrismaClient();
 async function main () {
   console.log('Clearing database');
 
-  await prisma.image.deleteMany();
-  await prisma.update.deleteMany();
-  await prisma.work.deleteMany();
   await prisma.info.deleteMany();
+  await prisma.update.deleteMany();
+  await prisma.image.deleteMany();
+  await prisma.work.deleteMany();
+  await prisma.series.deleteMany();
 
   console.log('Seeding database');
 
@@ -17,18 +18,25 @@ async function main () {
     data: seedData.info,
   });
 
-  for (const book of seedData.works) {
-    await prisma.work.create({
-      data: {
-        title: book.title,
-        description: book.description,
-        type: book.type,
-        images: {
-          create: book.images
-        }
+  await prisma.series.create({
+    data: {
+      ...seedData.series,
+      works: {
+        create: [{
+          ...seedData.works[0],
+          images: {
+            create: [seedData.works[0].images]
+          }
+        },
+        {
+          ...seedData.works[1],
+          images: {
+            create: [seedData.works[1].images]
+          }
+        }]
       }
-    });
-  }
+    }
+  })
 
   for (const update of seedData.updates) {
     await prisma.update.create({
