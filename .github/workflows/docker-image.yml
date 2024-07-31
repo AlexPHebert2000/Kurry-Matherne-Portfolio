@@ -17,6 +17,6 @@ jobs:
       env:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-      run: docker login --username username  --password password
+      run: docker login --username "$env:username" --password "$env:password"
     - name: Push to DockerHub
       run: docker image push alexphebert2000/kurry-portfolio:latest
