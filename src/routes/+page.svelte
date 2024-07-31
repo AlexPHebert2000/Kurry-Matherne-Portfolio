@@ -26,8 +26,8 @@
       <button class="w-36 bg-slate-400 rounded-full font-bold">Comics</button>
     </a>
   </div>
-  <div>
-    <h1>Latest Works!</h1>
+  <div class="flex flex-col items-center mt-4">
+    <h1 class="font-bold text-lg">Latest Works!</h1>
     <BookCarousel books={data.books}/>
   </div>
 </div>

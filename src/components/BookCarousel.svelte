@@ -16,7 +16,6 @@
   }
 </script>
 
-<div class="flex flex-1">
   <div class="flex flex-row items-center">
     <button class="-mr-5 z-10 rounded-full text-white w-10 h-10 bg-black/50" on:click={() => {scroll(false)}}>{"<"}</button>
     <div class="ease-in-out">
@@ -24,4 +23,4 @@
     </div>
     <button class="-ml-5 rounded-full text-white w-10 h-10 bg-black/50" on:click={() => scroll()}>{">"}</button>
   </div>
-</div>
+  <h1>{`${currentIndex + 1}/${books.length}`}</h1>

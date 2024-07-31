@@ -9,9 +9,10 @@ export const load = (async () => {
   });
   const info = await prisma.info.findFirstOrThrow();
   const books = await prisma.work.findMany({
-    where: {
-      type: "BOOK",
+    orderBy: {
+      id: 'desc'
     },
+    take: 10,
     include: {
       images: true,
     },
