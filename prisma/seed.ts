@@ -45,6 +45,19 @@ async function main () {
   }
 }
 
+  for (const art of seedData.works) {
+    if (art.type === 'ART'){
+      await prisma.work.create({
+        data: {
+          ...art,
+          images: {
+            create: art.images
+          }
+        }
+      })
+    }
+  }
+
 main()
   .then(() => { console.log("Database seeded"); })
   .catch((err) => { console.log("Failed to seed database: ", err); })
