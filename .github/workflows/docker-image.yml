@@ -14,4 +14,4 @@ jobs:
     - name: Build the Docker image
       run: docker compose build
     - name: Push to DockerHub
-      run: docker imag push alexphebert2000/kurry-portfolio:latest
+      run: docker image push alexphebert2000/kurry-portfolio:latest
