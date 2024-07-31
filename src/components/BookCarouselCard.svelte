@@ -8,7 +8,9 @@
         <img class="w-40" src={book.images[0].url} alt={book.title}/>
         <div class="ml-2">
             <h1>{book.title}</h1>
-            <p>{book.description}</p>
+            {#if book.description}
+                <p>{book.description}</p>
+            {/if}
         </div>
     </div>
     <a href={`/book/${book.id}`}>See More</a>
