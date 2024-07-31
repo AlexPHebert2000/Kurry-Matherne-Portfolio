@@ -16,7 +16,7 @@ jobs:
     - name: Test
       env:
         username: ${{ secrets.DOCKER_USERNAME }}
-      run: echo "$env:username"
+      run: echo "$username"
     - name: Login to Docker
       env:
         username: ${{ secrets.DOCKER_USERNAME }}
