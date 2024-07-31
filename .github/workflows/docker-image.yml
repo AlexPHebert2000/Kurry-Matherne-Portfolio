@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker compose build
+    - name: Login to Docker
+      run: docker login -p ${{ secrets.DOCKER_PASSWORD }} -u ${{ secrets.DOCKER_USERNAME }}
+    - name: Push to DockerHub
+      run: docker imag push alexphebert2000/kurry-portfolio:latest -q
