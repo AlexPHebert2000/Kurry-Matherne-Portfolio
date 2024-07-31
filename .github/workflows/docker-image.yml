@@ -14,6 +14,8 @@ jobs:
     - name: Build the Docker image
       run: docker compose build
     - name: Test
+      env:
+        username: ${{ secrets.DOCKER_USERNAME }}
       run: echo "$env:username"
     - name: Login to Docker
       env:
