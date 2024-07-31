@@ -1,15 +1,15 @@
 services:
   portfolio-external:
-    container_name: "portfolio-external"
-    image: "alexphebert2000/kurry-portfolio:latest"
+    container_name: 'portfolio-external'
+    image: 'alexphebert2000/kurry-portfolio:latest'
     build:
       context: .
       dockerfile: Dockerfile
-    user: "node"
+    user: 'node'
     environment:
       - NODE_ENV=production
     env_file:
-      - ".env"
+      - '.env'
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - '3000:3000'
